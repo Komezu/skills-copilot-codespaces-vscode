@@ -2,6 +2,9 @@
 const express = require('express');
 const app = express();
 
+// Importing the comments
+const comments = require('./comments');
+
 // Serve static files
 app.use(express.static('public'));
 
@@ -15,6 +18,7 @@ app.listen(3000, () => {
   console.log('Server is running on http://localhost:3000');
 });
 
+// Path: comments.js
 // Comments data
 const comments = [
   { id: 1, author: 'John', body: 'Cool!' },
